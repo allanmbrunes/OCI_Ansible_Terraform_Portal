@@ -98,12 +98,12 @@ resource "oci_core_security_list" "commercial_security_list" {
   display_name   = "commercialSecurityList"
 
   egress_security_rules {
-    protocol    = "all"
+    protocol    = "6"
     destination = "0.0.0.0/0"
   }
 
   ingress_security_rules {
-    protocol = "all"
+    protocol = "6"
     source   = "172.103.149.203/32"
 
     tcp_options {
@@ -119,12 +119,12 @@ resource "oci_core_security_list" "financial_security_list" {
   display_name   = "financialSecurityList"
 
   egress_security_rules {
-    protocol    = "all"
+    protocol    = "6"
     destination = "0.0.0.0/0"
   }
 
   ingress_security_rules {
-    protocol = "all"
+    protocol = "6"
     source   = "172.103.149.203/32"
 
     tcp_options {
@@ -134,7 +134,7 @@ resource "oci_core_security_list" "financial_security_list" {
   }
 
   ingress_security_rules {
-    protocol = "all"
+    protocol = "6"
     source   = "10.0.2.0/24"
 
     tcp_options {
