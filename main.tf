@@ -55,7 +55,7 @@ resource "oci_core_virtual_network" "vcn-net-aut" {
 resource "oci_core_subnet" "financial_subnet" {
   cidr_block        = "10.0.1.0/24"
   display_name      = "financialSubnet"
-  dns_label         = "financialsubnet"
+  dns_label         = "fisubnet"
   security_list_ids = [oci_core_security_list.financial_security_list.id]
   compartment_id    = var.compartment_ocid
   vcn_id            = oci_core_virtual_network.vcn-net-aut.id
@@ -66,7 +66,7 @@ resource "oci_core_subnet" "financial_subnet" {
 resource "oci_core_subnet" "commercial_subnet" {
   cidr_block        = "10.0.2.0/24"
   display_name      = "commercialSubnet"
-  dns_label         = "commercialsubnet"
+  dns_label         = "cosubnet"
   security_list_ids = [oci_core_security_list.commercial_security_list.id]
   compartment_id    = var.compartment_ocid
   vcn_id            = oci_core_virtual_network.vcn-net-aut.id
