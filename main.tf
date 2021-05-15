@@ -189,3 +189,5 @@ resource "oci_core_instance" "webserver2" {
     ssh_authorized_keys = var.ssh_public_key
   }
 }
+
+/*teste*/
