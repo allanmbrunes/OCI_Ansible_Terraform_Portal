@@ -1,29 +1,32 @@
 # Oracle Cloud Infrastructure OCI - Terraform - Ansible 
 
-Two subnets  
+Cloud architecture projected for two subnets in OCI VCN, Financial and Commercial, which only coworks of Commercial subnet can access the Financial subnet through speficic CIDR and another parameters. 
 
 ## Table of Contents
 
-- Ansible - playbook
+- Ansible
 - OCI (Oracle Cloud Infrastructure) 
-- Create users
-- Group ID
-- Set Password
+- Terraform Configuration
+- VNC Viwer (for test)
+- Portal page
 
 ## Use Cases
 
-In case of create, update or delete any user of within Cloud Infrastructure, this Ansible playbook is performed to send an email trough API.
+Two or more subnets through private VCN on Cloud Enviroment.  .
 
 ## Commands
 
-On CloudShell (OCI): 
-- pip3 install sendgrid==1.6.22 --user
-- ansible-galaxy collection install community.general
+On GitBash - Windows (Linux): 
+- yum install httpd -y
+- apachectl start
+- systemctl enable httpd
+- firewall-cmd --zone=public --add-service=http
+- firewall-cmd --permanent --zone=public --add-service=http
+- 
 
 ## Appendix:
 
-![Ok](https://user-images.githubusercontent.com/46986006/115596624-27fe5580-a28d-11eb-9318-b76fb4f303cd.jpg)
+https://registry.terraform.io/providers/hashicorp/oci/latest/docs
 
 
-### This plugin is part of the community.general collection (version 2.2.0).
 ### Version 1.0
