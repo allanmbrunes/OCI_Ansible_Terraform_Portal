@@ -22,5 +22,7 @@ On GitBash - Windows (Linux):
 
 https://registry.terraform.io/providers/hashicorp/oci/latest/docs
 
+![aut](https://user-images.githubusercontent.com/46986006/118525730-5e948800-b6f4-11eb-892a-6ab901439bd0.jpg)
+
 
 ### Version 1.0
