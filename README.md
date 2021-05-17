@@ -16,6 +16,7 @@ Accessing the subsets of private VCN through private VNC Viewer.
 
 On GitBash - Windows (Linux): 
 - Generate SSH key pair
+- ssh -i <key> opc@<IP_Server>
 
 ## Appendix:
 
