@@ -41,4 +41,3 @@ sudo systemctl start vncserver@:1.service
 sudo systemctl status vncserver@:1.service
 
 ssh -L 5901:localhost:5901 opc@<public-ip> -i <server-key>
-t
