@@ -1,6 +1,6 @@
 # Oracle Cloud Infrastructure OCI - Terraform - Ansible 
 
-Cloud architecture projected for two subnets in OCI VCN, Financial and Commercial, which only coworks of Commercial subnet can access the Financial subnet through speficic CIDR and another parameters inside private VCN. 
+Cloud architecture projected for two subnets in OCI VCN, Financial and Commercial, which only coworks of Commercial subnet can access the Financial subnet through speficic CIDR and Security List resources inside private VCN. 
 
 ## Table of Contents
 
