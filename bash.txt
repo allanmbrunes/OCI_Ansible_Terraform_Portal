@@ -1,0 +1,43 @@
+/*Financial Server - Instance*/
+
+sudo yum install httpd -y
+
+sudo apachectl start
+sudo systemctl enable httpd
+
+sudo firewall-cmd --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=http
+
+cd /var/www/html/
+
+sudo chown -R apache:apache /var/www/html
+
+/*Commercial Server - Instance*/
+
+sudo  yum -y groups install "Server with GUI"
+
+sudo yum group list
+
+sudo yum install tigervnc-server -y
+
+cd /lib/systemd/system/
+
+/*Commercial Server - Instance*/
+
+sudo cp vncserver@.service /etc/systemd/system/vncserver@:1.service
+
+sudo vi /etc/systemd/system/vncserver@:1.service
+
+/* FROM ExecStart=/usr/bin/vncserver_wrapper <USER> % TO ExecStart=/usr/bin/vncserver_wrapper opc % */
+
+vncpasswd
+
+sudo systemctl enable vncserver@:1.service
+
+sudo systemctl daemon-reload
+
+sudo systemctl start vncserver@:1.service
+
+sudo systemctl status vncserver@:1.service
+
+ssh -L 5901:localhost:5901 opc@<public-ip> -i <server-key>
